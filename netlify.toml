@@ -1,0 +1,17 @@
+# Configurazione Netlify per la SPA Vite in ripasso-ai/
+# Il repository git ha radice qui: l'app vera e propria sta in ripasso-ai/.
+
+[build]
+  base = "ripasso-ai"
+  command = "pnpm build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# Le rotte sono gestite da React Router (BrowserRouter): qualsiasi URL
+# deve servire index.html invece del 404 di Netlify.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

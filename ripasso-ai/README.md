@@ -25,6 +25,26 @@ Variabili in `.env.local`:
 
 Usa solo la chiave **pubblica**: la `service_role` non deve mai finire nel client né su Git.
 
+## Deploy su Netlify
+
+Il repository Git ha la radice un livello sopra questa cartella, quindi Netlify deve
+puntare a `ripasso-ai/`. La configurazione è nel `netlify.toml` alla radice del repo:
+
+| Impostazione | Valore |
+|---|---|
+| Base directory | `ripasso-ai` |
+| Build command | `pnpm build` |
+| Publish directory | `dist` (relativa alla base → `ripasso-ai/dist`) |
+
+In **Site configuration → Environment variables** aggiungi:
+
+- `VITE_SUPABASE_URL`
+- `VITE_SUPABASE_ANON_KEY` (chiave pubblica anon/publishable)
+
+Le rotte `/quiz` e `/moduli` sono gestite da React Router: `netlify.toml` e
+`public/_redirects` riscrivono ogni URL su `index.html`, altrimenti Netlify
+risponde con la sua pagina "Page not found".
+
 ## Pagine
 
 - `/` — reindirizza a `/quiz`.
