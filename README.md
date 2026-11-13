@@ -106,6 +106,7 @@ Ogni modulo vale circa **6–10 ore** e segue sempre lo stesso ritmo:
 | 08 | [Prisma](moduli/08-prisma.md) | Modelli, relazioni, migrazioni, transazioni | Accesso dati tipizzato |
 | 09 | [LangChain](moduli/09-langchain.md) | Prompt, structured output, RAG, eval | Pipeline di generazione quiz |
 | 10 | [AI: skill e agenti](moduli/10-ai-skills-agenti.md) | Tool, memoria, orchestrazione, guardrail | Tutor e agente di valutazione |
+| 11 | [Autenticazione e autorizzazione](moduli/11-autenticazione-autorizzazione.md) | Sessioni, JWT, OAuth, ruoli, RLS, attacchi web | Login sicuro con ruoli e policy RLS |
 | — | [Progetto finale](progetto-finale.md) | Architettura, multiutenza, sicurezza, scalabilità | RipassoAI in produzione |
 | — | [Banca quiz ed esami](esami/banca-quiz.md) | Ripasso e simulazione d'esame | 3 prove complete con soluzioni |
 | — | [Esempio di scheda compilata](esami/esempio-scheda-ripasso.md) | Modello di output della piattaforma | Scheda pronta da personalizzare |
@@ -223,7 +224,8 @@ ripasso-ai/
 - [Modulo 07 — Express](moduli/07-express.md)
 - [Modulo 08 — Prisma](moduli/08-prisma.md)
 - [Modulo 09 — LangChain](moduli/09-langchain.md)
-- [Modulo 10 — Skill e agenti AI](moduli/10-ai-skills-agenti.md)
+- [Modulo 10 - Skill e agenti AI](moduli/10-ai-skills-agenti.md)
+- [Modulo 11 - Autenticazione e autorizzazione](moduli/11-autenticazione-autorizzazione.md)
 - [Progetto finale — RipassoAI](progetto-finale.md)
 - [Banca quiz ed esami simulati](esami/banca-quiz.md)
 - [Esempio di scheda di ripasso compilata](esami/esempio-scheda-ripasso.md)

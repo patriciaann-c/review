@@ -13,6 +13,7 @@ const EMOJI = {
   prisma: '🔷',
   langchain: '🦜',
   'agenti-ai': '🤖',
+  autenticazione: '🔐',
 }
 
 // Pagina dei quiz: elenco ricercabile degli argomenti e quiz da svolgere.
