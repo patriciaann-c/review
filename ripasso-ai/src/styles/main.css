@@ -1072,6 +1072,264 @@ a { color: var(--rai-primary-dark); }
   font-size: 3rem;
 }
 
+/* --- Schedina progressi --- */
+.rai-progressi {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  padding: 1.35rem 1.4rem;
+}
+
+.rai-progressi::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 5px;
+  background: var(--rai-gradient-brand);
+}
+
+.rai-progressi-loading {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--rai-muted);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.rai-progressi-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.rai-progressi-title {
+  margin: 0;
+  font-size: clamp(1.15rem, 1rem + 0.6vw, 1.45rem);
+}
+
+.rai-progressi-sub {
+  margin: 0.15rem 0 0;
+  color: var(--rai-muted);
+  font-size: 0.84rem;
+  font-weight: 650;
+}
+
+.rai-livello {
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  width: 64px;
+  height: 64px;
+  border-radius: 20px;
+  color: #fff;
+  background: var(--rai-gradient-hero);
+  box-shadow: 0 12px 24px -14px rgba(91, 61, 240, 0.9);
+}
+
+.rai-livello span {
+  font-size: 0.58rem;
+  font-weight: 850;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  opacity: 0.92;
+}
+
+.rai-livello strong {
+  font-size: 1.5rem;
+  line-height: 1;
+  color: #fff;
+}
+
+.rai-metriche {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.rai-metrica {
+  padding: 0.6rem 0.7rem;
+  border: 1px solid var(--rai-border);
+  border-radius: var(--rai-radius-sm);
+  background: #f7f4ff;
+}
+
+.rai-metrica strong {
+  display: block;
+  font-size: 1.18rem;
+  font-weight: 850;
+  line-height: 1.15;
+}
+
+.rai-metrica span {
+  color: var(--rai-muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.rai-livello-blocco { margin-bottom: 1.1rem; }
+
+.rai-livello-testo {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.35rem;
+  color: var(--rai-muted);
+  font-size: 0.75rem;
+  font-weight: 750;
+}
+
+.rai-progressi .rai-progress {
+  height: 8px;
+  margin-bottom: 0;
+}
+
+.rai-traguardi-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.55rem;
+}
+
+.rai-traguardi-head h3 {
+  margin: 0;
+  color: var(--rai-muted);
+  font-size: 0.78rem;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.rai-traguardi {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.5rem;
+  margin: 0 0 1rem;
+  padding: 0;
+  list-style: none;
+}
+
+.rai-traguardo {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  min-width: 0;
+  padding: 0.5rem 0.6rem;
+  border: 1px solid var(--rai-border);
+  border-radius: 12px;
+  background: #fbfaff;
+  opacity: 0.68;
+}
+
+.rai-traguardo.unlocked {
+  opacity: 1;
+  border-color: var(--rai-border-strong);
+  background: linear-gradient(135deg, #f3efff, #eafaf7);
+}
+
+.rai-traguardo-emoji {
+  flex: 0 0 auto;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.rai-traguardo-body {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.rai-traguardo-nome {
+  overflow: hidden;
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.rai-traguardo-meta {
+  color: var(--rai-muted);
+  font-size: 0.68rem;
+  font-weight: 650;
+}
+
+.rai-traguardo-bar {
+  flex: 0 0 auto;
+  width: 34px;
+  height: 4px;
+  margin-left: auto;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #ece7fb;
+}
+
+.rai-traguardo-bar span {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  background: var(--rai-primary);
+}
+
+.rai-riprendi {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.8rem 0.9rem;
+  border: 1px solid #c8f1ea;
+  border-radius: 16px;
+  background: var(--rai-mint-soft);
+}
+
+.rai-riprendi-eyebrow {
+  margin: 0;
+  color: #0f766e;
+  font-size: 0.62rem;
+  font-weight: 850;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.rai-riprendi-nome {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0;
+  font-weight: 850;
+}
+
+.rai-riprendi-testo {
+  margin: 0;
+  color: var(--rai-muted);
+  font-size: 0.75rem;
+}
+
+.rai-progressi-nota {
+  margin-top: 0.7rem;
+  color: var(--rai-muted);
+  font-size: 0.72rem;
+}
+
+#quiz-runner { scroll-margin-top: 5.5rem; }
+
+@media (max-width: 767.98px) {
+  .rai-progressi { padding: 1.1rem 1rem; }
+  .rai-metriche { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .rai-traguardi { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .rai-riprendi { flex-direction: column; align-items: stretch; }
+  .rai-riprendi .btn { width: 100%; }
+}
+
+@media (max-width: 479.98px) {
+  .rai-traguardi { grid-template-columns: 1fr; }
+  .rai-livello { width: 54px; height: 54px; border-radius: 16px; }
+}
+
 /* --- Login --- */
 .rai-login-wrap {
   display: flex;

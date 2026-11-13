@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react'
+import ProgressiCard from './ProgressiCard'
 import QuizRunner from './QuizRunner'
 import { useArgomenti } from '../hooks/useArgomenti'
 
@@ -21,6 +22,12 @@ export default function QuizArgomenti() {
   const { argomenti, caricamento, errore } = useArgomenti()
   const [scelto, setScelto] = useState(null)
   const [cerca, setCerca] = useState('')
+  const [refreshProgressi, setRefreshProgressi] = useState(0)
+
+  function allena(argomentoId) {
+    setScelto(argomentoId)
+    document.getElementById('quiz-runner')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
 
   const totaleDomande = useMemo(
     () => argomenti.reduce((somma, a) => somma + a.domande, 0),
@@ -69,6 +76,12 @@ export default function QuizArgomenti() {
         </div>
       </section>
 
+      <ProgressiCard
+        argomenti={argomenti}
+        refresh={refreshProgressi}
+        onAllenati={allena}
+      />
+
       <div className="row g-4">
         <aside className="col-lg-4 col-xl-3">
           <div className="rai-panel rai-topic-panel">
@@ -115,8 +128,13 @@ export default function QuizArgomenti() {
           </div>
         </aside>
 
-        <div className="col-lg-8 col-xl-9">
-          <QuizRunner key={attivo.id} argomentoId={attivo.id} titolo={attivo.nome} />
+        <div className="col-lg-8 col-xl-9" id="quiz-runner">
+          <QuizRunner
+            key={attivo.id}
+            argomentoId={attivo.id}
+            titolo={attivo.nome}
+            onCompletato={() => setRefreshProgressi((n) => n + 1)}
+          />
         </div>
       </div>
     </>

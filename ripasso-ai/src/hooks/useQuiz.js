@@ -12,7 +12,7 @@ function mescola(items) {
 }
 
 // Carica le domande di un argomento e invia il tentativo all'RPC di correzione.
-export function useQuiz({ argomentoId } = {}) {
+export function useQuiz({ argomentoId, onInviato } = {}) {
   const [domande, setDomande] = useState([])
   const [risposte, setRisposte] = useState({})
   const [risultato, setRisultato] = useState(null)
@@ -63,7 +63,10 @@ export function useQuiz({ argomentoId } = {}) {
     })
     setInvio(false)
     if (error) setErrore(error.message)
-    else setRisultato(data)
+    else {
+      setRisultato(data)
+      onInviato?.(data)
+    }
   }
 
   function azzera() {

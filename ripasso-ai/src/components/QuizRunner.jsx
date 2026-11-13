@@ -16,8 +16,8 @@ function messaggioRisultato(percentuale) {
 }
 
 // Quiz di un argomento: una domanda alla volta, punteggio e revisione.
-export default function QuizRunner({ argomentoId, titolo }) {
-  const { domande, risposte, rispondi, invia, azzera, risultato, caricamento, invio, errore } = useQuiz({ argomentoId })
+export default function QuizRunner({ argomentoId, titolo, onCompletato }) {
+  const { domande, risposte, rispondi, invia, azzera, risultato, caricamento, invio, errore } = useQuiz({ argomentoId, onInviato: onCompletato })
   const [indice, setIndice] = useState(0)
 
   if (caricamento) {
